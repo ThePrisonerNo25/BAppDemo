@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="163dp"
+        android:layout_height="94dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="2dp"
+        android:elevation="1dp"
+        >
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/girl"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/course_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/card"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLines="2"
+        tools:text="FMS功能性评估的方法与实践 FMS功能性评估的方法与实践"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:textColor="@color/color_txt_main1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_price"
+        app:layout_constraintRight_toRightOf="@id/course_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="免费"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/course_num_and_view_num"
+        app:layout_constraintLeft_toLeftOf="@+id/course_name"
+        app:layout_constraintRight_toLeftOf="@+id/tv_price"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="13节课 / 23次观看"
+        android:textColor="@color/color_txt_main2"
+        android:textSize="11sp"
+        android:layout_marginEnd="4dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        app:layout_constraintLeft_toLeftOf="@+id/course_name"
+        app:layout_constraintRight_toRightOf="@id/course_name"
+        app:layout_constraintBottom_toTopOf="@+id/course_num_and_view_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="FMS功能性评估的方法与实践 FMS功能性评估的方法与实践"
+        android:textColor="@color/color_txt_main2"
+        android:textSize="11sp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

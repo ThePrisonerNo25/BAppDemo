@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动作名称"
+        android:textSize="14sp"
+        android:textColor="@color/yj_text_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/yj_black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        android:background="@android:color/transparent"
+        android:hint="例如：前后小碎步"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:maxEms="12"
+        android:ellipsize="middle"
+        />
+
+    <View
+        android:id="@+id/v_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/yj_dividing_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:src="@drawable/selector_gradient_yellow_gray"
+        app:layout_constraintTop_toBottomOf="@+id/v_h"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_2"
+        android:layout_marginTop="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:src="@drawable/selector_gradient_yellow_gray"
+        app:layout_constraintTop_toBottomOf="@+id/v_h"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/iv_1"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_unit_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="次"
+        android:textSize="14sp"
+        android:textColor="@drawable/selector_color_gray_yellow1"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_1"
+        app:layout_constraintRight_toRightOf="@id/iv_1"
+        app:layout_constraintTop_toBottomOf="@+id/iv_1"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_unit_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="秒"
+        android:textSize="14sp"
+        android:textColor="@drawable/selector_color_gray_yellow1"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_2"
+        app:layout_constraintRight_toRightOf="@id/iv_2"
+        app:layout_constraintTop_toBottomOf="@+id/iv_2"
+        android:padding="4dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_11"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:src="@drawable/selector_gradient_yellow_gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unit_times"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_22"
+        />
+
+    <ImageView
+        android:id="@+id/iv_22"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:src="@drawable/selector_gradient_yellow_gray"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unit_second"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/iv_11"
+        />
+
+    <EditText
+        android:id="@+id/et_action_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="40dp"
+        android:textSize="14sp"
+        android:textColor="@color/yj_black"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_22"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:maxLength="4"
+        />
+
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yj_text_gray"
+        android:textSize="14sp"
+        android:text="次"
+        app:layout_constraintLeft_toRightOf="@+id/et_action_num"
+        app:layout_constraintTop_toTopOf="@+id/et_action_num"
+        app:layout_constraintBottom_toBottomOf="@+id/et_action_num"
+        android:layout_marginStart="16dp"
+        />
+
+
+
+    <View
+        android:id="@+id/v_h2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/yj_dividing_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_action_num"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="组数"
+        android:textColor="@color/yj_text_gray"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_h2"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/et_action_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="40dp"
+        android:textSize="14sp"
+        android:textColor="@color/yj_black"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_group"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:maxLength="4"
+        />
+
+    <TextView
+        android:id="@+id/tv_unit_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yj_text_gray"
+        android:textSize="14sp"
+        android:text="组"
+        app:layout_constraintLeft_toRightOf="@+id/et_action_group"
+        app:layout_constraintTop_toTopOf="@+id/et_action_group"
+        app:layout_constraintBottom_toBottomOf="@+id/et_action_group"
+        android:layout_marginStart="16dp"
+        />
+
+    <View
+        android:id="@+id/v_h3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/yj_dividing_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unit_group"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_h3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/yj_yellow"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="完成"
+        android:textSize="16sp"
+        android:textColor="@color/yj_black"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

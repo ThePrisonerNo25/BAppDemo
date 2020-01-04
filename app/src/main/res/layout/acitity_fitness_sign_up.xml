@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cl_bottom"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="审核未通过。资质未满足要求，请重新提交资质"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:background="@color/color_main"
+                android:paddingStart="20dp"
+                android:paddingEnd="18dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tips"
+                android:textSize="16sp"
+                android:textColor="@color/color_txt_main1"
+                android:text="姓名"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_name_label"
+                android:layout_marginEnd="35dp"
+                android:maxLength="14"
+                tools:text="张三"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_id_card_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_label"
+                android:textSize="16sp"
+                android:textColor="@color/color_txt_main1"
+                android:text="身份证号码"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="20"
+                android:ellipsize="middle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_id_card_label"
+                android:layout_marginEnd="35dp"
+                android:maxLength="14"
+                tools:text="43212288466128612863"
+                />
+
+            <TextView
+                android:id="@+id/tv_address_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_id_card_label"
+                android:textSize="16sp"
+                android:textColor="@color/color_txt_main1"
+                android:text="报名赛区"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="20"
+                android:ellipsize="middle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_address_label"
+                android:layout_marginEnd="35dp"
+                android:maxLength="14"
+                tools:text="广州"
+                />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_address"
+                app:layout_constraintTop_toTopOf="@+id/tv_address_label"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_address_label"
+                android:src="@color/color_main"
+                />
+
+            <TextView
+                android:id="@+id/tv_certification_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address_label"
+                android:textSize="16sp"
+                android:textColor="@color/color_txt_main1"
+                android:text="资质证书"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_certification_label"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottom"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <TextView
+            android:id="@+id/tv_sign_num"
+            android:layout_width="130dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="13sp"
+            android:textColor="@color/color_txt_main1"
+            android:text="报名学员人数：1人"
+            android:gravity="center"
+            />
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@+id/tv_sign_num"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="提交"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@color/color_main"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

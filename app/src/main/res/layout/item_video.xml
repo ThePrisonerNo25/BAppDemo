@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="center"
+        />
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintRight_toRightOf="@+id/photo"
+        app:layout_constraintTop_toTopOf="@+id/photo"
+        android:paddingTop="6dp"
+        android:paddingEnd="6dp"
+        android:paddingLeft="2dp"
+        android:paddingBottom="2dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_photo_front"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="#99ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/photo"
+        app:layout_constraintRight_toRightOf="@id/photo"
+        app:layout_constraintBottom_toBottomOf="@+id/photo"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            tools:text="hello"/>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

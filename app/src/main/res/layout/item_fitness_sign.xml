@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        android:id="@+id/tv_sign_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        tools:text="未支付"
+        android:textColor="@color/red"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_fitness_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_sign_status"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_sign_status"
+        tools:text="“我的好私教”赛事报名 "
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:textColor="@color/color_txt_main4"
+        android:textStyle="bold"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_sign_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fitness_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_sign_status"
+        android:layout_marginTop="14dp"
+        tools:text="报名人数：2人"
+        android:textColor="@color/color_txt_main2"
+        android:textSize="13sp"
+        android:layout_marginStart="14dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_sign_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_num"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_sign_status"
+        android:layout_marginTop="5dp"
+        tools:text="赛区：广州赛区"
+        android:textColor="@color/color_txt_main2"
+        android:textSize="13sp"
+        android:layout_marginStart="14dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_sign_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_sign_status"
+        android:layout_marginTop="5dp"
+        tools:text="比赛时间：2020-03-01"
+        android:textColor="@color/color_txt_main2"
+        android:textSize="13sp"
+        android:layout_marginStart="14dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_sign_fee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_sign_status"
+        android:layout_marginTop="5dp"
+        tools:text="费用：498元"
+        android:textColor="@color/color_txt_main2"
+        android:textSize="13sp"
+        android:layout_marginStart="14dp"
+        />
+
+    <View
+        android:id="@+id/v_h"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_fee"
+        android:background="@color/color_bg_main3"
+        android:layout_marginTop="13dp"
+        />
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="68dp"
+        android:layout_height="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/v_h"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="10dp"
+        style="@style/btn_fill_corner_noclick_style"
+        android:text="去支付"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible"
+        />
+
+    <Button
+        android:id="@+id/btn_view_division"
+        android:layout_width="68dp"
+        android:layout_height="26dp"
+        app:layout_constraintRight_toLeftOf="@+id/btn_commit"
+        app:layout_constraintTop_toBottomOf="@+id/v_h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        style="@style/btn_fill_corner_noclick_style"
+        android:text="查看赛区"
+        />
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="68dp"
+        android:layout_height="30dp"
+        android:src="@color/color_main"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

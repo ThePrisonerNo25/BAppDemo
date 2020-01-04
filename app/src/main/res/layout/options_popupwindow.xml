@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:background="@android:color/holo_blue_light"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_negative"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="取消"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintRight_toLeftOf="@+id/tv_positive"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        />
+    <TextView
+        android:id="@+id/tv_positive"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="确定"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_negative"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

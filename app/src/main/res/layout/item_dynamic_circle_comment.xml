@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_comment_avatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_comment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="李教练：李教练：李教练：李教练："
+        android:textSize="12sp"
+        android:textColor="#f5947157"
+        app:layout_constraintLeft_toRightOf="@+id/iv_comment_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="6dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxEms="10"
+        />
+    <TextView
+        android:id="@+id/tv_comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="上午10:21"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_reply_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#f5313340"
+        android:textSize="12sp"
+        tools:text="效果很不错！坚持！效果很不错！坚持！效果很不错！坚持！效果很不错！坚持！"
+        app:layout_constraintLeft_toRightOf="@+id/iv_comment_avatar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comment_name"
+        android:layout_marginLeft="6dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

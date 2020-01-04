@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yangchaoming.bappdemo">
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".bapp_course.course_detail.CourseDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--<activity android:name=".step_test.Step2TestActivity"-->
+            <!--android:windowSoftInputMode="adjustResize|stateHidden" />-->
+
+        <activity android:name=".step_test.CountdownActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".step_test.HeartRateActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".step_test.Camera3.CameraActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".transiton.ImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".observe.ObserveThreeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".observe.ObserveTwoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".video.videoTrim.VideoTrimActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

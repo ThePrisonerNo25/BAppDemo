@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior=".bapp_course.course_detail.behavior.CustomMiddleBehavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_course_brief"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/white"
+                android:paddingTop="15dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="11dp">
+                <TextView
+                    android:id="@+id/tv_course_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="有氧舞蹈精品团操"
+                    android:textSize="16sp"
+                    android:textColor="@color/color_txt_main1"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_course_brief"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_course_name"
+                    android:text="有氧舞蹈（AEROBIC DANCE）是配合音乐有节奏舞动的有氧运动，能把许多舞蹈动作健美操化，反复进行组合练习。"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_txt_main1"
+                    android:layout_marginTop="7dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_current_price_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_course_brief"
+                    android:text="￥"
+                    android:textSize="14sp"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_current_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_current_price_unit"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_current_price_unit"
+                    android:text="---"
+                    tools:text="298"
+                    android:textSize="24sp"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_previous_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_current_price"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_course_brief"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_current_price_unit"
+                    android:text="￥398"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_txt_main2"
+                    android:layout_marginStart="11dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/v_h"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:background="@color/color_bg_main2"
+                app:layout_constraintTop_toBottomOf="@+id/cl_course_brief"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_college"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_h"
+                android:paddingStart="20dp"
+                android:paddingEnd="18dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="9dp"
+                android:background="@color/white"
+                >
+                <ImageView
+                    android:id="@+id/iv_college"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@color/color_main"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_college"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_college"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_college"
+                    android:text="清波健身学院 "
+                    android:layout_marginStart="4dp"
+                    android:paddingTop="2dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/v_h1"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:background="@color/color_bg_main2"
+                app:layout_constraintTop_toBottomOf="@+id/cl_college"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                style="@style/MyTablayoutstyle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_h1"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior=".bapp_course.course_detail.behavior.CustomViewPageBehavior"
+
+        ></androidx.viewpager.widget.ViewPager>
+
+    <ImageView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:src="@color/color_main"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="加入学习"
+        android:layout_gravity="bottom"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

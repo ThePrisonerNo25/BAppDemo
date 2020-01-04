@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorgray">#333333</color>
+    <color name="yj_yellow">#eab807</color>
+    <color name="yj_black">#313340</color>
+    <color name="yj_dividing_line">#f3f3f3</color>
+    <color name="yj_bg_gray">#f9f9f9</color>
+    <color name="yj_text_gray">#bbbbbb</color>
+    <color name="yj_light_yellow">#d4bf77</color>
+
+    <color name="shadow_color">#7F000000</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="red">#D81B60</color>
+
+    <!-- app主色调 -->
+    <color name="color_main">#21b8c5</color>
+    <color name="color_main_translucent">#8021b8c5</color>
+    <color name="color_main2">#e0f8fa</color>
+
+    <!-- app 提交 按钮的不同状态颜色  -->
+    <color name="btn_disable">#eeeeee</color>
+    <color name="btn_click">#1da5b1</color>
+    <color name="btn_normal">@color/color_main</color>
+    <color name="btn_txt_disable">@color/color_txt_main2</color>
+    <color name="btn_txt_click">@color/white</color>
+    <color name="btn_txt_normal">@color/white</color>
+
+    <!-- tag标签按钮不同状态颜色 -->
+    <color name="tag_bg_disable">@color/color_bg_main2</color>
+    <color name="tag_bg_select">@color/color_main</color>
+    <color name="tag_bg_normal">@color/color_bg_main2</color>
+    <color name="tag_txt_disable">@color/color_txt_main3</color>
+    <color name="tag_txt_select">@color/white</color>
+    <color name="tag_txt_normal">@color/color_txt_main1</color>
+
+    <!-- 单选或复选按钮的颜色样式 -->
+    <color name="color_selectbtn_disable">#abb0b0</color>
+    <color name="color_selectbtn_select">@color/color_main</color>
+    <color name="color_selectbtn_normal">#abb0b0</color>
+
+
+    <!-- app字体主颜色 -->
+    <color name="color_txt_main1">#000000</color>
+    <color name="color_txt_main2">#898989</color>
+    <color name="color_txt_main3">#d6d6d6</color>
+    <color name="color_txt_main4">#313340</color>
+
+    <!-- app背景主色调 -->
+    <color name="color_bg_main1">#2E3132</color>
+    <!-- app背景主色调上控件的显示的另类黑色 -->
+    <color name="color_bg_main1_up_widget">#393c3d</color>
+    <color name="color_bg_main2">#F9F9F9</color>
+    <!-- 分割线颜色 -->
+    <color name="color_bg_main3">#EEEEEE</color>
+
+
+
+    <color name="light_green">#12B8C5</color>
+    <!-- app字体主颜色 -->
+    <color name="text_color_1">#333333</color>
+    <color name="text_color_2">#666666</color>
+    <color name="text_color_3">#999999</color>
+    <color name="d6">#D6D6D6</color>
+    <color name="d9">#D9D9D9</color>
+
+    <!-- 分割线颜色 -->
+    <color name="f9">#f9f9f9</color>
+
+</resources>

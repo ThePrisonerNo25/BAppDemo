@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="20dp"
+    android:paddingEnd="18dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="130dp"
+        android:layout_height="74dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="2dp"
+        android:elevation="1dp"
+        >
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/girl"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/course_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/card"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLines="1"
+        tools:text="FMS功能性评估的方法与实践 FMS功能性评估的方法与实践"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:textColor="@color/color_txt_main1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        app:layout_constraintLeft_toLeftOf="@+id/course_name"
+        app:layout_constraintRight_toRightOf="@id/course_name"
+        app:layout_constraintTop_toBottomOf="@+id/course_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="FMS功能性评估的方法与实践 FMS功能性评估的方法与实践"
+        android:textColor="@color/color_txt_main2"
+        android:textSize="13sp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_play_lock"
+        app:layout_constraintRight_toRightOf="@id/course_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@color/color_main"
+        />
+
+    <TextView
+        android:id="@+id/tv_play_des"
+        app:layout_constraintLeft_toLeftOf="@+id/course_name"
+        app:layout_constraintRight_toLeftOf="@+id/iv_play_lock"
+        app:layout_constraintBottom_toBottomOf="@id/card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="播放完毕"
+        android:textColor="@color/color_txt_main2"
+        android:textSize="12sp"
+        android:layout_marginEnd="4dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_video_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@+id/card"
+        app:layout_constraintBottom_toBottomOf="@+id/card"
+        android:text="00:12"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginEnd="12dp"/>
+
+    <ImageView
+        android:id="@+id/iv_video_logo"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintRight_toLeftOf="@+id/tv_video_time"
+        app:layout_constraintBottom_toBottomOf="@+id/card"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

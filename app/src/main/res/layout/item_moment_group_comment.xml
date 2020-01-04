@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@color/color_main"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="12"
+        tools:text="NIKE"
+        android:textSize="16sp"
+        android:textColor="@color/color_txt_main1"
+        app:layout_constraintLeft_toRightOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/avatar"
+        android:layout_marginStart="13dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_time_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="18"
+        tools:text="上午10:21   广州赛区"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        app:layout_constraintLeft_toRightOf="@+id/avatar"
+        android:layout_marginStart="13dp"
+        android:textSize="12sp"
+        android:textColor="@color/color_txt_main2"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

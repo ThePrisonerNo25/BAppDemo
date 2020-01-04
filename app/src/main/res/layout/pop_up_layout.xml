@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--<com.example.yangchaoming.bappdemo.popupwindow.ArrowImageView-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:elevation="4dp"-->
+        <!--/>-->
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_white_solid_gray_stroke_2"
+            android:elevation="4dp" />
+
+
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/textTitle"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/messageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textButton" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_bottom"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="@drawable/shape_white_solid_gray_stroke_2"
+            android:elevation="4dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

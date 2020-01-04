@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_head"
+                android:layout_width="0dp"
+                android:layout_height="117dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/color_main"
+                >
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="14dp"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_back"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_back"
+                    android:text="匹配结果"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_match_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="匹配成功"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="15dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_entry_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_head"
+                android:textColor="@color/color_txt_main1"
+                android:textSize="13sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                tools:text="参赛编号：123456431"
+                />
+
+
+            <View
+                android:id="@+id/v_h"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_entry_number"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_bg_main3"/>
+
+
+            <TextView
+                android:id="@+id/tv_coach_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_h"
+                android:textSize="13sp"
+                android:textColor="@color/color_txt_main1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                android:text="私人教练信息："
+                />
+
+            <TextView
+                android:id="@+id/tv_coach_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_coach_info"
+                android:textSize="13sp"
+                android:textColor="@color/color_txt_main2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                tools:text="姓名：李小二"
+                />
+
+            <TextView
+                android:id="@+id/tv_coach_id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_coach_name"
+                android:textSize="13sp"
+                android:textColor="@color/color_txt_main2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                tools:text="身份证号码：431232456787654523456"
+                />
+
+            <TextView
+                android:id="@+id/tv_coach_certification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_coach_id_card"
+                android:textSize="13sp"
+                android:textColor="@color/color_txt_main2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                tools:text="资质证书："
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_coach_certification"
+                android:layout_marginTop="15dp"
+                />
+
+            <View
+                android:id="@+id/v_h1"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_bg_main3"/>
+
+
+            <TextView
+                android:id="@+id/tv_member_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_h1"
+                android:textSize="13sp"
+                android:textColor="@color/color_txt_main1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                android:text="学员信息："
+                />
+
+            <TextView
+                android:id="@+id/tv_member_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_member_info"
+                android:textSize="13sp"
+                android:textColor="@color/color_txt_main2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                tools:text="姓名：李小"
+                />
+
+            <TextView
+                android:id="@+id/tv_member_id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_member_name"
+                android:textSize="13sp"
+                android:textColor="@color/color_txt_main2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                tools:text="身份证号码：431232456787654523456"
+                />
+
+            <TextView
+                android:id="@+id/tv_member_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_member_id_card"
+                android:textSize="13sp"
+                android:textColor="@color/color_txt_main2"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                tools:text="手机号码：176 8765 2345"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_bottom"
+                android:layout_width="0dp"
+                android:layout_height="86dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_member_phone"
+                android:background="@color/color_bg_main3">
+                <Button
+                    android:id="@+id/btn_match"
+                    android:layout_width="100dp"
+                    android:layout_height="28dp"
+                    style="@style/btn_fill_corner_noclick_style"
+                    android:text="重新配对"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

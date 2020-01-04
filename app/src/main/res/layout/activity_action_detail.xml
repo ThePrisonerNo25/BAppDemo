@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="动作详情"
+            android:textColor="@color/yj_black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/colorPrimary" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_filter"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginEnd="20dp"-->
+            <!--android:padding="4dp"-->
+            <!--android:text="筛选"-->
+            <!--android:textColor="@color/yj_yellow"-->
+            <!--android:textSize="14sp" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/yj_dividing_line" />
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_head"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:id="@+id/tv_action_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="四足俯卧撑"
+                android:textSize="22sp"
+                android:textColor="@color/yj_black"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="20dp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="类型: "
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_action_name"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="上肢"
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_type_label"
+                app:layout_constraintTop_toBottomOf="@+id/tv_action_name"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_muscle_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主要肌肉群: "
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_type"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_muscle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="上肢"
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_muscle_label"
+                app:layout_constraintTop_toBottomOf="@+id/tv_type"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_other_muscle_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="其他肌肉："
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_muscle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_other_muscle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="上肢"
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_other_muscle_label"
+                app:layout_constraintTop_toBottomOf="@+id/tv_muscle"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_device_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="器械要求："
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_other_muscle"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_device"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="上肢"
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_device_label"
+                app:layout_constraintTop_toBottomOf="@+id/tv_other_muscle"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_level_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="难度："
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_device"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="上肢"
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_level_label"
+                app:layout_constraintTop_toBottomOf="@+id/tv_device"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_action_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动作要领："
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_level"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_action_label"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/tv_muscle_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="主要肌肉示意图："
+                android:textColor="@color/yj_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_muscle1"
+                android:layout_width="0dp"
+                android:layout_height="248dp"
+                app:layout_constraintDimensionRatio="82:124"
+                app:layout_constraintTop_toBottomOf="@+id/tv_muscle_tip"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/iv_muscle2"
+                android:scaleType="fitXY"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                />
+
+            <ImageView
+                android:id="@+id/iv_muscle2"
+                android:layout_width="0dp"
+                android:layout_height="248dp"
+                app:layout_constraintDimensionRatio="82:124"
+                app:layout_constraintTop_toBottomOf="@+id/tv_muscle_tip"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_muscle1"
+                android:scaleType="fitXY"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
