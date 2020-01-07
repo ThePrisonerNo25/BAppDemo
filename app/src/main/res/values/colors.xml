@@ -17,6 +17,9 @@
     <color name="white">#ffffffff</color>
     <color name="red">#D81B60</color>
 
+    <color name="primary_green">#6a8136</color>
+    <color name="background_card">#FEFEFE</color>
+
     <!-- app主色调 -->
     <color name="color_main">#21b8c5</color>
     <color name="color_main_translucent">#8021b8c5</color>

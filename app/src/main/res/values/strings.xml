@@ -4,7 +4,8 @@
     <string name="textButton">waht?</string>
     <string name="head_behavior">com.example.yangchaoming.bappdemo.bapp_course.course_detail.behavior.CustomHeadBehaivor</string>
 
-
+    <string name="collapsed">collapsed: %s</string>
+    <string name="expanded">expanded: %s</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

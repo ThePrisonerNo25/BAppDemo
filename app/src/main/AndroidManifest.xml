@@ -18,7 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".bapp_course.course_detail.CourseDetailActivity"
+        <activity android:name=".expand_recyclerview.VerticalLinearRecyclerViewSampleActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             >
             <intent-filter>
