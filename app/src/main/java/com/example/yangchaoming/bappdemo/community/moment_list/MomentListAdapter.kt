@@ -14,22 +14,23 @@ import kotlinx.android.synthetic.main.item_moment_type_0.view.*
 
 class MomentListAdapter (val context: Context,var list:ArrayList<MomentBean>): RecyclerView.Adapter<MomentListAdapter.Holder>(){
 
-    companion object{
-        const val TYPE_SHORT=0
-        const val TYPE_LONG=1
-    }
+//    companion object{
+//        const val TYPE_SHORT=0
+//        const val TYPE_LONG=1
+//    }
 
     fun resetData( _list:ArrayList<MomentBean>){
         list = _list
         notifyDataSetChanged()
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MomentListAdapter.Holder {
-        val view =   if(viewType == TYPE_LONG){
-          LayoutInflater.from(context).inflate(R.layout.item_moment_type_0,parent,false)
-
-        }else{
-            LayoutInflater.from(context).inflate(R.layout.item_moment_type_1,parent,false)
-        }
+//        val view =   if(viewType == TYPE_LONG){
+//          LayoutInflater.from(context).inflate(R.layout.item_moment_type_0,parent,false)
+//
+//        }else{
+//            LayoutInflater.from(context).inflate(R.layout.item_moment_type_1,parent,false)
+//        }
+        val view = LayoutInflater.from(context).inflate(R.layout.item_moment_type_0,parent,false)
         return Holder(view)
     }
 
@@ -68,10 +69,10 @@ class MomentListAdapter (val context: Context,var list:ArrayList<MomentBean>): R
         }
     }
 
-    override fun getItemViewType(position: Int): Int {
-        val type= if(position%2 == 0) TYPE_SHORT else TYPE_LONG
-        return type
-    }
+//    override fun getItemViewType(position: Int): Int {
+//        val type= if(position%2 == 0) TYPE_SHORT else TYPE_LONG
+//        return type
+//    }
 
 
     inner class  Holder(itemView: View) : RecyclerView.ViewHolder(itemView){

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:src="@color/color_main"
+        />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar"
+        tools:text="大白"
+        android:textColor="@color/text_color_1"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        />
+    <TextView
+        android:id="@+id/tv_moment_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        tools:text="动态：9999"
+        android:textColor="@color/text_color_3"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_fans_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/tv_moment_num"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        tools:text="粉丝：12"
+        android:textColor="@color/text_color_3"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        />
+
+    <com.example.yangchaoming.bappdemo.widget.ButtonAttention
+        android:id="@+id/btn_attention"
+        android:layout_width="60dp"
+        android:layout_height="26dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar"
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        android:layout_marginEnd="20dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

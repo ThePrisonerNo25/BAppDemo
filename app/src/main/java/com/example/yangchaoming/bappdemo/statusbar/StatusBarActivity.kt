@@ -8,6 +8,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.yangchaoming.bappdemo.R
+import kotlinx.android.synthetic.main.activity_statusbar.*
 
 class StatusBarActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,10 @@ class StatusBarActivity : AppCompatActivity(){
         window.apply {
             addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             decorView.systemUiVisibility =  View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        }
+
+        btn_attention.setOnClickListener {
+            it.isSelected = !it.isSelected
         }
     }
 }

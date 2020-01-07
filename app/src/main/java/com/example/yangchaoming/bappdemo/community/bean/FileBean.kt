@@ -2,7 +2,7 @@ package com.example.yangchaoming.bappdemo.community.bean
 
 data class FileBean(
         var type: Int?,
-        var url: Int?
+        var url: String?
 )
 
 //type (integer, optional): 文件类型 0图片 1视频 ,

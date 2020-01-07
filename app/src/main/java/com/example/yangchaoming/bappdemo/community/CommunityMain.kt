@@ -10,8 +10,8 @@ import com.flyco.tablayout.listener.OnTabSelectListener
 import kotlinx.android.synthetic.main.acitity_community_main.*
 
 class CommunityMain : AppCompatActivity() {
-    lateinit var fragments: ArrayList<Fragment>
-    lateinit var titles: ArrayList<String>
+    private var fragments = ArrayList<Fragment>()
+    private var titles = ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.acitity_community_main)
