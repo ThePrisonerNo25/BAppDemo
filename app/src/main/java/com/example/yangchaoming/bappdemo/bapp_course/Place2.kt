@@ -14,32 +14,47 @@ object Place2 {
 //
 //        println("body:" + user.getBody())
 
-//        val json = """
-//       {
-//            "title": "Most elegant way of using Gson + Kotlin with default values and null safety",
-//            "body": null,
-//            "payWall": false,
-//            "body222":"null",
-//            "ignoredProperty": "Ignored"
-//       }
-//    """
+        val json = """
+       {
+            "title": "Most elegant",
+            "body": null,
+            "payWall": false,
+            "body222":"null",
+            "ignoredProperty": "Ignored",
+            "defaultNull": null
+       }
+    """
 //
 //    val article = JSON.parseObject(json, Article::class.java)
 //    Log.e("onCreate", "onCreate: $article");
 
 
         // "viewCount": 9999,
-//    val article = Gson().fromJson(json, Article::class.java)
+    val article = Gson().fromJson(json, Article::class.java)
 //    Log.e("onCreate", "onCreate: $article");
-//        println(article)
-//
+        println(article)
+
 //    if(article.titleImage.isNullOrEmpty()){
-//        Log.e("onCreate", " article isNullOrEmpty");
+////        Log.e("onCreate", " article isNullOrEmpty");
+//        println("article isNullOrEmpty")
 //    }
 //
 //    if (article.body.isNullOrEmpty()){
-//        Log.e("onCreate", "body isNullOrEmpty");
+////        Log.e("onCreate", "body isNullOrEmpty");
+//        println("body isNullOrEmpty")
 //    }
+
+        if (article.defaultNull == true){
+//        Log.e("onCreate", "body isNullOrEmpty");
+            println("defaultNull is True")
+        }
+
+        if (!article.defaultNull2){
+//        Log.e("onCreate", "body isNullOrEmpty");
+            println("defaultNull2 is false")
+        }else{
+            println("defaultNull2 true")
+        }
 
         //---------------------------------
 //        val arr = JSONArray(json)

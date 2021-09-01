@@ -47,7 +47,11 @@
         android:background="@color/white"
         tl:tl_indicator_corner_radius="1.5dp"
         tl:tl_indicator_height="3dp"
-        tl:tl_indicator_width="10dp"
+        tl:tl_indicator_width="5dp"
+        app:tl_indicator_style="TRIANGLE"
+
+        app:tl_indicator_color="@color/text_color_2"
+        app:tl_indicator_width_equal_title="false"
         app:tl_textSelectColor="@color/light_green"
         app:tl_textUnselectColor="@color/text_color_2"
         app:tl_textsize="14sp"

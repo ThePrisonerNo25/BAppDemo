@@ -3,21 +3,21 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.yangchaoming.bappdemo"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    dataBinding {
-        enabled = true
-    }
-
+//    dataBinding {
+//        enabled = true
+//    }
     androidExtensions {
         experimental = true
     }
@@ -37,10 +37,23 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
 
     }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a'
+            universalApk true
+        }
+    }
+
 
 }
 
 dependencies {
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    def nav_version = "2.3.2"
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -49,8 +62,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'com.google.android.material:material:1.1.0-alpha07'
 //    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+//    implementation 'com.github.bumptech.glide:glide:4.8.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
     implementation group: 'androidx.annotation', name: 'annotation', version: '1.0.0'
 
 
@@ -64,7 +77,8 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
 
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    kapt  'com.github.bumptech.glide:compiler:4.11.0'
 
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
 
@@ -84,6 +98,27 @@ dependencies {
     implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 
     implementation group: 'androidx.annotation', name: 'annotation', version: '1.1.0'
+    implementation 'com.github.islandparadise14:Mintable:1.5.0'
+
+//    implementation 'com.github.todou:nestrefresh-androidx:0.0.8'
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation "androidx.navigation:navigation-compose:1.0.0-alpha04"
+//    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+//    implementation "androidx.fragment:fragment:1.2.0"
+
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'androidx.fragment:fragment-ktx:1.2.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
+
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+
+    //mothi
+    def moshi_version = '1.9.2'
+    implementation "com.squareup.moshi:moshi:$moshi_version"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version" //kotlin 代码生成
 
 }
 repositories {

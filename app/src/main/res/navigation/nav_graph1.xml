@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation2"
+    app:startDestination="@id/chooseRecipFragment"
+    >
+    <fragment
+        android:id="@+id/chooseRecipFragment"
+        android:name="com.example.yangchaoming.bappdemo.navigation.ChooseRecipFragment"
+        android:label="fragment_choose_recip"
+        tools:layout="@layout/fragment_choose_recip">
+        <action
+            android:id="@+id/action_chooseRecipFragment_to_specifyAmountFragment"
+            app:destination="@id/specifyAmountFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/specifyAmountFragment"
+        android:name="com.example.yangchaoming.bappdemo.navigation.SpecifyAmountFragment"
+        android:label="fragment_specify_amount"
+        tools:layout="@layout/fragment_specify_amount">
+        <action
+            android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment"
+             />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.yangchaoming.bappdemo.navigation.ConfirmationFragment"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation">
+        <action
+            android:id="@+id/action_confirmationFragment_to_navigation2"
+            app:popUpTo="@id/chooseRecipFragment"
+            app:popUpToInclusive="false"
+            />
+
+
+    </fragment>
+</navigation>

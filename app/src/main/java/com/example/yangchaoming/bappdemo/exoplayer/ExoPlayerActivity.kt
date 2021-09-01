@@ -87,25 +87,25 @@ class ExoPlayerActivity : AppCompatActivity(){
 
     }
 
-    var mHandler = Handler()
-    var shouldListeningProgress = true
-    var updateProgressAction  = Runnable {
-        updateProgress()
-    }
-
-    private fun updateProgress(){
-        val position = if (player == null) 0 else player?.currentPosition ?: 0
-//        Log.e("updateProgress", "updateProgress: $position");
-//        if(shouldListeningProgress){
-//            if(position<20000){
-//                mHandler.postDelayed(updateProgressAction,1000)
-//            }else{
-//                Log.e("updateProgress", "请购买会员");
-//                releasePlayer()
-//            }
-//        }
-
-    }
+//    var mHandler = Handler()
+//    var shouldListeningProgress = true
+//    var updateProgressAction  = Runnable {
+//        updateProgress()
+//    }
+//
+//    private fun updateProgress(){
+//        val position = if (player == null) 0 else player?.currentPosition ?: 0
+////        Log.e("updateProgress", "updateProgress: $position");
+////        if(shouldListeningProgress){
+////            if(position<20000){
+////                mHandler.postDelayed(updateProgressAction,1000)
+////            }else{
+////                Log.e("updateProgress", "请购买会员");
+////                releasePlayer()
+////            }
+////        }
+//
+//    }
 
 
     private fun buildMediaSource(uri: Uri): MediaSource {
@@ -179,8 +179,8 @@ class ExoPlayerActivity : AppCompatActivity(){
         player?.playWhenReady = playWhenReady == false;
         player?.seekTo(currentWindow ?: 0, playbackPosition?: 0);
         player?.prepare(buildMediaSource, false, false);
-        shouldListeningProgress = true
-        updateProgress()
+//        shouldListeningProgress = true
+//        updateProgress()
     }
 
     private fun releasePlayer() {
@@ -191,7 +191,7 @@ class ExoPlayerActivity : AppCompatActivity(){
             player!!.release()
             player = null
         }
-        shouldListeningProgress =false
+//        shouldListeningProgress =false
     }
 
 

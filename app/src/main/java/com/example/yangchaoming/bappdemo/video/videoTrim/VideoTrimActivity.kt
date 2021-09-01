@@ -171,8 +171,7 @@ class VideoTrimActivity : AppCompatActivity() {
 
 
     private fun initialData() {
-        val bd = intent.extras
-        videoPath = bd.getString(VIDEO_PATH_KEY) ?: ""
+        videoPath = intent.extras?.getString(VIDEO_PATH_KEY) ?: ""
 //        Log.e("initialData", "initialData: $videoPath");
     }
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item android:state_pressed="true" android:color="?btnMiddlePressColor"/>-->
+<!--    <item android:state_enabled="false" android:color="?btnMiddleDisableColor"/>-->
+<!--    <item  android:color="?btnMiddleNormalColor"/>-->
+
+    <item android:state_pressed="true" >
+        <shape>
+            <corners android:radius="50dp" />
+            <solid android:color="?btnMiddlePressColor" />
+        </shape>
+    </item>
+
+    <item android:state_enabled="false" >
+        <shape>
+            <corners android:radius="50dp" />
+            <solid android:color="?btnMiddleDisableColor" />
+        </shape>
+
+    </item>
+    <item  android:color="?btnBigNormalColor">
+        <shape>
+            <corners android:radius="50dp" />
+            <solid android:color="?btnMiddleNormalColor" />
+        </shape>
+    </item>
+</selector>

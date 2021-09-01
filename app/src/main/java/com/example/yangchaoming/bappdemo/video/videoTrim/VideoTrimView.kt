@@ -158,7 +158,7 @@ class VideoTrimView @JvmOverloads constructor(context: Context, attrs: Attribute
 
         btnConfirm.setOnClickListener {
 //            Log.e("setUpListener", "setUpListener: ${mSourceUri?.path}")
-            videoTrimListener?.trimVideo(mSourceUri!!.path,mLeftProgressPos,mRightProgressPos)
+            videoTrimListener?.trimVideo(mSourceUri!!.path!!,mLeftProgressPos,mRightProgressPos)
         }
     }
 

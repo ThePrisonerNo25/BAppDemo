@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item android:state_pressed="true" android:color="?btnSmallPressColor"/>-->
+<!--    <item android:state_enabled="false" android:color="?btnSmallDisableColor"/>-->
+<!--    <item  android:color="?btnSmallNormalColor"/>-->
+
+    <item android:state_pressed="true" >
+        <shape>
+            <corners android:radius="50dp" />
+            <solid android:color="?btnSmallPressColor" />
+            <stroke android:color="?btnSmallPressBorderColor" android:width="1dp"/>
+        </shape>
+    </item>
+
+    <item android:state_enabled="false" >
+        <shape>
+            <corners android:radius="50dp" />
+            <solid android:color="?btnSmallDisableColor" />
+            <stroke android:color="?btnSmallDisableBorderColor" android:width="1dp"/>
+        </shape>
+
+    </item>
+    <item  android:color="?btnBigNormalColor">
+        <shape>
+            <corners android:radius="50dp" />
+            <solid android:color="?btnSmallNormalColor" />
+            <stroke android:color="?btnSmallNormalBorderColor" android:width="1dp"/>
+        </shape>
+    </item>
+</selector>

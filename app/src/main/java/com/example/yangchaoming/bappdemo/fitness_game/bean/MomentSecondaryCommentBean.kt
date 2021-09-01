@@ -7,7 +7,7 @@ data class MomentSecondaryCommentBean(
         var canDel: Boolean?,
         var content: String?,
         var name: String?,
-        var replyToName: String
+        var replyToName: String?
 ) : Parcelable {
     constructor(source: Parcel) : this(
             source.readValue(Boolean::class.java.classLoader) as Boolean?,
@@ -33,6 +33,7 @@ data class MomentSecondaryCommentBean(
         }
     }
 }
+
 
 //赛事动态2级评论/回复列表item {
 //    canDel (boolean, optional): 当前回复item能否删除 (前端删除按钮显示控制) ,

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.yangchaoming.bappdemo.b_app_demo.WeightProgressBar
+        android:id="@+id/weight_progress"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
+    <com.example.yangchaoming.bappdemo.b_app_demo.WeightHistoryView
+        android:id="@+id/weight_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <com.example.yangchaoming.bappdemo.b_app_demo.Battery
+        android:id="@+id/battery"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+         />
+
+    <com.example.yangchaoming.bappdemo.b_app_demo.CircleLoadingView
+        android:id="@+id/circle_loading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <com.example.yangchaoming.bappdemo.b_app_demo.CircleProgresView
+        android:id="@+id/circle_progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <com.example.yangchaoming.bappdemo.b_app_demo.LessonRingView
+        android:id="@+id/lessonRingView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_txt_main2"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_lesson_ring"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="ring"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

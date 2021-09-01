@@ -56,7 +56,8 @@ class HeartRateProgressView @JvmOverloads constructor(context: Context, attribut
         mTextPaint.getTextBounds("0",0,1,rect)
         offsetValue=rect.width()*2/3
 
-        heartIcon=  drawableToBitmap(context.getDrawable(R.mipmap.ic_launcher_round))
+        val drawable = ContextCompat.getDrawable(context, R.mipmap.ic_launcher_round)
+        heartIcon =  drawableToBitmap(drawable)
 
     }
 
@@ -88,7 +89,7 @@ class HeartRateProgressView @JvmOverloads constructor(context: Context, attribut
         val heartH=dp2px(30f)
         val heartLeft =offsetValue+dp2px(8f)+visualDiff
         val heartRectF=RectF(heartLeft,-heartH+dp2px(4f),heartLeft+heartW,0f)
-        if(heartIcon!=null)canvas.drawBitmap(heartIcon,null,heartRectF, null)
+        if(heartIcon!=null)canvas.drawBitmap(heartIcon!!,null,heartRectF, null)
 
         //画 "bpm" 画布的右下角
         val bpmText:String ="bpm"
@@ -139,7 +140,7 @@ class HeartRateProgressView @JvmOverloads constructor(context: Context, attribut
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, value, context.resources.displayMetrics)
     }
 
-   private fun drawableToBitmap( drawable: Drawable):Bitmap? {
+   private fun drawableToBitmap( drawable: Drawable?):Bitmap? {
         if(drawable==null)return null
         val w = drawable.intrinsicWidth;
         val h = drawable.intrinsicHeight;

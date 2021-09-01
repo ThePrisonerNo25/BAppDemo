@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigationMainFragment">
+
+    <fragment
+        android:id="@+id/navigationMainFragment"
+        android:name="com.example.yangchaoming.bappdemo.navigation.NavigationMainFragment"
+        android:label="fragment_navigation_main"
+        tools:layout="@layout/fragment_navigation_main" >
+        <action
+            android:id="@+id/action_navigationMainFragment_to_chooseRecipFragment"
+            app:destination="@id/navigation2" />
+        <deepLink
+            android:id="@+id/deepLink"
+            android:autoVerify="true"
+            app:uri="yijian:www.yj.com/back" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.example.yangchaoming.bappdemo.navigation.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" >
+<!--        <argument-->
+<!--            android:name="value"-->
+<!--            app:argType="float"-->
+<!--            android:defaultValue="-1" />-->
+<!--        <argument-->
+<!--            android:name="itembean"-->
+<!--            app:argType="com.example.yangchaoming.bappdemo.action_library.bean.ActionItemBean"-->
+<!--            app:nullable="true"-->
+<!--            android:defaultValue="@null" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="com.example.yangchaoming.bappdemo.navigation.BalanceFragment"
+        android:label="fragment_balance"
+        tools:layout="@layout/fragment_balance" />
+
+    <include app:graph="@navigation/nav_graph1"/>
+
+    <action android:id="@+id/action_global_transactionFragment" app:destination="@id/transactionFragment" />
+</navigation>

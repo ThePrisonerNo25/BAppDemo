@@ -70,7 +70,6 @@
         app:layout_constraintTop_toBottomOf="@+id/avatar"
         android:maxLines="4"
         android:ellipsize="end"
-        android:layout_marginStart="13dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="4dp"
         android:textColor="@color/color_txt_main4"
@@ -86,7 +85,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_content"
         android:layout_marginTop="8dp"
-        android:visibility="gone"
+        android:visibility="visible"
         />
 
     <TextView

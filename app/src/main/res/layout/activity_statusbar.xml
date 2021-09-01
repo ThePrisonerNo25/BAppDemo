@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="?bg0"
    >
     <ImageView
         android:id="@+id/iv_girl"
@@ -11,11 +11,129 @@
         android:layout_height="200dp"
         android:src="@mipmap/girl"
         android:scaleType="fitXY"
+        android:visibility="gone"
         />
 
     <com.example.yangchaoming.bappdemo.widget.ButtonAttention
         android:id="@+id/btn_attention"
         android:layout_width="60dp"
         android:layout_height="30dp"
+        />
+
+    <ImageView
+
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView"
+        />
+
+    <com.example.yangchaoming.bappdemo.widget.RotateAddIcon
+        android:id="@+id/rotate_view"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:padding="6dp"
+        android:background="@color/color_txt_main1"
+        />
+
+    <com.example.yangchaoming.bappdemo.widget.MyView
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="hello"
+        android:background="?buttonTextColor"
+        android:textColor="?colorPrimaryDark"
+        />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="?buttonIcon"/>
+
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_first_time"-->
+<!--        android:layout_width="110dp"-->
+<!--        android:layout_height="32dp"-->
+<!--        android:text="测试心率"-->
+<!--        android:textColor="@drawable/selector_hear_rate_color"-->
+<!--        android:background="@drawable/selector_heart_rate_shape"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:visibility="visible"-->
+<!--        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/theme1"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="主题绿色-暗色"
+            style="@style/btn_middle_theme_style"
+            />
+
+        <Button
+            android:id="@+id/theme2"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="主题绿色-亮色"
+            style="@style/btn_middle_theme_style"
+            />
+
+        <Button
+            android:id="@+id/theme3"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="主题蓝色-暗色"
+            style="@style/btn_middle_theme_style"
+            />
+
+        <Button
+            android:id="@+id/enableBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="按钮不可点击"
+            style="@style/btn_middle_theme_style"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_big"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        style="@style/btn_big_theme_style"
+        android:text="大按钮"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        style="@style/btn_middle_theme_style"
+        android:text="中按钮-黑白样式"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_middle1"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        style="@style/btn_middle_theme_style_1"
+        android:text="中按钮-主题样式"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_small"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        style="@style/btn_small_theme_style"
+        android:text="小按钮-黑白样式"
+        android:layout_marginTop="10dp"
         />
 </LinearLayout>
