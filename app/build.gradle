@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 android {
     compileSdkVersion 29
@@ -47,6 +48,12 @@ android {
     }
 
 
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.example.yangchaoming.bappdemo.greendao.gen'
+    targetGenDir 'src/main/java'
 }
 
 dependencies {
@@ -119,6 +126,9 @@ dependencies {
     def moshi_version = '1.9.2'
     implementation "com.squareup.moshi:moshi:$moshi_version"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version" //kotlin 代码生成
+
+    //greendao
+    implementation 'org.greenrobot:greendao:3.3.0' // add library
 
 }
 repositories {

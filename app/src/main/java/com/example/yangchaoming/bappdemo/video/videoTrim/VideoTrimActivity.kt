@@ -90,11 +90,11 @@ class VideoTrimActivity : AppCompatActivity() {
                 var outWidth:Float = originWidth.toFloat()
                 var outHeight:Float = originHeight.toFloat()
 
-                if(originHeight>originWidth && originWidth>540){
-                    outWidth = 540f
+                if(originHeight>originWidth && originWidth>1080){
+                    outWidth = 1080f
                     outHeight = originHeight.toFloat()/originWidth*outWidth
-                }else if(originHeight < originWidth && originHeight>540){
-                    outHeight = 540f
+                }else if(originHeight < originWidth && originHeight>1080){
+                    outHeight = 1080f
                     outWidth = originWidth.toFloat()/originHeight * outHeight
                 }
                 Log.e("trimVideo", "trimVideo:originWidth = $originWidth ----originHeight = $originHeight  -------bitrate = $bitrate");

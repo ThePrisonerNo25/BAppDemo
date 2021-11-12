@@ -21,8 +21,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         tools:replace="android:theme"
+        android:name=".MyApplication"
         android:theme="@style/GreenDarkTheme">
-                <activity android:name=".exoplayer.ExoPlayerActivity">
+                <activity android:name=".video.VideoActivity">
                     <intent-filter>
                         <action android:name="android.intent.action.MAIN" />
 
@@ -59,6 +60,8 @@
         <activity
             android:name=".video.videoTrim.VideoTrimActivity"
             android:screenOrientation="portrait" />
+
+        <activity android:name=".splash.HomeActivity"/>
     </application>
 
 </manifest>
